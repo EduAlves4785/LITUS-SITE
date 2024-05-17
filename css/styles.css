@@ -256,10 +256,11 @@ nav {
 
   .slideshow-container,
   .slideshow-container .img-box,.slideshow-container .img-box-2{
-    height: 25rem;
+    height: 35rem;
   }
 
   .text {
+    top: 10rem;
     width: 100%;
     justify-content: space-around;
     height: 20rem;
@@ -285,6 +286,7 @@ nav {
   justify-content: center;
 
   h1{
+    text-align: center;
     font-size: 35px;
     color: rgb(33, 45, 96);
   }
@@ -321,7 +323,8 @@ nav {
 
   @media only screen and (max-width: 900px){
     &{
-      margin-top: 1rem;
+      margin-top: 0;
+      padding: 1rem;
     }
   }
 }
@@ -427,7 +430,7 @@ nav {
   @media only screen and (max-width: 900px){
     &{
       height: auto;
-      padding: 1rem;
+      padding: 3rem 1rem;
       gap: 2rem;
       justify-content: center;
       align-items: center;
@@ -435,6 +438,7 @@ nav {
 
       .video-box{
         width: 100%;
+        height: 15rem;
       }
 
       .texto-video{
@@ -534,7 +538,7 @@ nav {
   }
 
   .custom-carousel-item {
-    width: calc(47% / 2 - .5rem); /* Mostrar 2 itens por vez */
+    width: calc(46% / 2 - .5rem); /* Mostrar 2 itens por vez */
     max-width: 100%; 
   }
 }
@@ -569,6 +573,7 @@ footer{
 
     @media (max-width: 768px){
       &{
+        padding: 1rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -581,8 +586,8 @@ footer{
     }
   }
   .redes-sociais{
-    padding: .5rem;
-    width: 60%;
+    padding: 1rem;
+    width: 70%;
     display: flex;
     justify-content: space-around;
 
