@@ -123,7 +123,7 @@ nav {
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0)
       ),
-      url("/img/image1.jpg");
+      url("../img/image1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@ nav {
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0)
       ),
-      url("/img/image2.jpg");
+      url("../img/image2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -357,7 +357,7 @@ nav {
   .box-img{
     width: 40%;
     height: auto;
-    background-image: url("/img/escritorio.JPG");
+    background-image: url("../img/escritorio.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
