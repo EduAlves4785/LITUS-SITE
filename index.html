@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">-->
+    <meta http-equiv="X-Frame-Options" content="DENY">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -21,49 +24,52 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <img src="./img/logo.png" alt="Logo litus fidc" />
+      <img src="./img/logo-litus.svg" alt="Logo litus fidc" />
       <ul>
         <li><a class="active" href="#">Início</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Serviços</a></li>
         <li><a href="#">Contato</a></li>
+        <li> <a class="li-whatsapp" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Entre em contato
+        </a></li>
+        <li><a class="li-qprof" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer">Área do cliente</a></li>
       </ul>
+      <div class="botoes-box">
+        <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Entre em contato
+        </a>
+        <a class="portal-btn" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer">
+          Área do cliente
+        </a>
+      </div>
     </nav>
 
     <div class="slideshow-container">
-      <div class="mySlides fade">
+      <div class="mySlides">
         <div class="numbertext">1 / 2</div>
         <div class="img-box"></div>
-        <div class="text"><p>
-          Libere o potencial do seu fluxo de caixa: Antecipe seus recebíveis e mantenha sua empresa no caminho certo.
-        </p>
-        <a
-        href="https://api.whatsapp.com/send?phone=551123739000"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-      <i class="fa-brands fa-whatsapp"></i>
-        Entre em contato
-      </a>
+        <div class="text">
+          <p>Libere o potencial do seu fluxo de caixa: Antecipe seus recebíveis e mantenha sua empresa no caminho certo.</p>
+          <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> Entre em contato
+          </a>
+        </div>
       </div>
-      </div>
-      <div class="mySlides fade">
+      <div class="mySlides">
         <div class="numbertext">2 / 2</div>
         <div class="img-box-2"></div>
         <div class="text">
-          <p>Agilidade que faz a diferença: Nossa equipe está aqui para oferecer soluções de crédito personalizadas e processos eficientes, para que você possa agir rapidamente.</a></p>
-          <a
-        href="https://api.whatsapp.com/send?phone=551123739000"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-      <i class="fa-brands fa-whatsapp"></i>
-        Entre em contato
-      </a>
+          <p>Agilidade que faz a diferença: Nossa equipe está aqui para oferecer soluções de crédito personalizadas e processos eficientes, para que você possa agir rapidamente.</p>
+          <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> Entre em contato
+          </a>
         </div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
     </div>
     <br />
     <section class="vantanges-container">
@@ -118,21 +124,15 @@
 
     <section class="parceiros-container">
       <h1>Nossos parceiros e Investidores</h1>
-      <div class="custom-carousel-container">
-        <div class="custom-carousel-slide">
-          <img src="./img/Parceiros/rnx.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/bradesco.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/finaxis.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/itau.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/liberum.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/qcertifica_logo_nova.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/qprof.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/rumo.png" class="custom-carousel-item">
-          <img src="./img/Parceiros/serasa.svg" class="custom-carousel-item">
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-item">1</div>
+          <div class="carousel-item">2</div>
+          <div class="carousel-item">3</div>
+          <div class="carousel-item">4</div>
+          <div class="carousel-item">5</div>
+          <div class="carousel-item">6</div>
         </div>
-      
-        <a class="custom-carousel-prev" onclick="customPlusSlides(-1)">&#10094;</a>
-        <a class="custom-carousel-next" onclick="customPlusSlides(1)">&#10095;</a>
       </div>
     </section>
     <footer>
@@ -141,7 +141,6 @@
         <div class="cnpj">© 2024 LITUS FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS MULTISSETORIAL, CNPJ 22.101.473/0001-18 Rua Renato Paes de Barros, 750,14º Andar CEP: 04530-001 Itaim Bibi - São Paulo, SP.</div>
         <div class="redes-sociais">
           <a href="https://www.linkedin.com/company/litusasset/mycompany/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/litusasset"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.youtube.com/@litusfidc8184"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>

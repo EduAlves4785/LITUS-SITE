@@ -1,37 +1,21 @@
-let customSlideIndex = 0;
-const customSlidesToShow = 4;
-const customSlideWidth = 100 / customSlidesToShow; // Percentage width for each slide
-const customGap = 1; // gap in rem
-const customTotalGap = customGap * (customSlidesToShow - 1); // total gap between slides to show
+const carouselTrack = document.getElementById('carouselTrack');
+const carouselItems = document.querySelectorAll('.carousel-item');
 
-customShowSlides(customSlideIndex);
+let currentIndex = 0;
+const itemWidth = carouselItems[0].offsetWidth;
+const totalItems = carouselItems.length;
 
-function customPlusSlides(n) {
-  customShowSlides(customSlideIndex += n);
-}
-
-function customCurrentSlide(n) {
-  customShowSlides(customSlideIndex = n);
-}
-
-function customShowSlides(n) {
-  let slides = document.getElementsByClassName("custom-carousel-item");
-  let dots = document.getElementsByClassName("custom-carousel-dot");
-  let carouselSlide = document.getElementsByClassName("custom-carousel-slide")[0];
-  
-  // Calculate max slide index
-  const maxIndex = slides.length - customSlidesToShow;
-  if (n > maxIndex) { customSlideIndex = maxIndex; }
-  if (n < 0) { customSlideIndex = 0; }
-  
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= totalItems) {
+    currentIndex = 0;
   }
-  
-  // Calculate the correct translateX value considering the gap
-  const transformValue = -(customSlideIndex * (customSlideWidth + customTotalGap / customSlidesToShow));
-  carouselSlide.style.transform = `translateX(${transformValue}%)`;
-  if (dots[customSlideIndex]) {
-    dots[customSlideIndex].className += " active";
-  }
+  updateCarousel();
 }
+
+function updateCarousel() {
+  const offset = -1 * currentIndex * itemWidth;
+  carouselTrack.style.transform = `translateX(${offset}px)`;
+}
+
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
