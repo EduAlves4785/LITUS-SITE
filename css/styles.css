@@ -30,10 +30,11 @@ nav {
   ul {
     list-style: none;
     display: flex;
-    margin:0;
+    margin: 0;
     padding: 0;
 
-    & .li-whatsapp,.li-qprof{
+    & .li-whatsapp,
+    .li-qprof {
       display: none;
     }
   }
@@ -73,56 +74,54 @@ nav {
     display: none;
   }
 
-  .botoes-box{
+  .botoes-box {
     display: flex;
     gap: 1rem;
     position: absolute;
     right: 0px;
     padding: 1rem;
 
-    .whatsapp-btn{
-      padding: .5rem;
+    .whatsapp-btn {
+      padding: 0.5rem;
       border: none;
       border-radius: 5px;
       color: white;
       font-size: 18px;
       font-weight: 300;
-      background-color: rgb(37,211,102);
-      transition: .3s;
+      background-color: rgb(37, 211, 102);
+      transition: 0.3s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         font-size: 19px;
         color: rgb(236, 236, 236);
       }
     }
 
-    .portal-btn{
-      padding: .5rem;
+    .portal-btn {
+      padding: 0.5rem;
       border: none;
       border-radius: 5px;
       color: white;
       font-size: 18px;
       font-weight: 300;
-      background-color: rgb(31,46,93);
-      transition: .3s;
+      background-color: rgb(31, 46, 93);
+      transition: 0.3s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         font-size: 19px;
         color: rgb(236, 236, 236);
       }
     }
-
   }
 
-
   @media (max-width: 1200px) {
-    &{
+    & {
       display: block;
     }
 
-    .botoes-box{
+    .botoes-box {
       display: none;
     }
 
@@ -151,38 +150,38 @@ nav {
       transition: all 0.5s;
     }
 
-    ul .li-whatsapp{
+    ul .li-whatsapp {
       width: 15rem;
-      display:inline;
-      padding: .5rem;
+      display: inline;
+      padding: 0.5rem;
       border: none;
       border-radius: 5px;
       color: white;
       font-size: 18px;
       font-weight: 300;
-      background-color: rgb(37,211,102);
-      transition: .3s;
+      background-color: rgb(37, 211, 102);
+      transition: 0.3s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         font-size: 19px;
         color: rgb(236, 236, 236);
       }
     }
 
-    ul .li-qprof{
+    ul .li-qprof {
       display: inline;
-      padding: .5rem;
+      padding: 0.5rem;
       border: none;
       border-radius: 5px;
       color: white;
       font-size: 18px;
       font-weight: 300;
       background-color: rgb(62, 76, 117);
-      transition: .3s;
+      transition: 0.3s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         font-size: 19px;
         color: rgb(236, 236, 236);
       }
@@ -209,14 +208,6 @@ nav {
 }
 
 /* Carousel inicio */
-/* Estilos para o carousel com animação de slide */
-
-/* Reset básico para o HTML e o body */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /* Estilo para o container principal do slideshow */
 .slideshow-container {
@@ -527,6 +518,10 @@ body {
   .video-box {
     width: 50%;
     border-radius: 20px;
+
+    .video-placeholder{
+      height: 100%;
+    }
   }
 
   .texto-video {
@@ -609,11 +604,11 @@ body {
   }
 }
 
-@keyframes slide{
-  form{
+@keyframes slide {
+  form {
     transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
 }
@@ -653,7 +648,7 @@ body {
 
 .logos-slide {
   display: inline-block;
-  animation: 35s slide infinite linear;
+  animation: 15s slide infinite linear;
 }
 
 .logos-slide img {
@@ -663,12 +658,13 @@ body {
   margin: 0 40px;
 }
 
-@media only screen and (max-width: 900px){
-  .logos-slide{
+@media only screen and (max-width: 900px) {
+  .logos-slide {
     animation: 15s slide infinite linear;
   }
 
-  .logos:before,.logos:after{
+  .logos:before,
+  .logos:after {
     background: none;
   }
 }
@@ -767,8 +763,8 @@ footer {
   .atendimento {
     color: rgb(190, 190, 190);
 
-    @media (max-width: 768px){
-      &{
+    @media (max-width: 768px) {
+      & {
         text-align: center;
       }
     }
