@@ -1,8 +1,15 @@
 const ulBtns = document.querySelectorAll('#ul-botoes li a');
 const checkbox = document.getElementById("check");
 
-ulBtns.forEach(element => {
+// Filtrar os elementos para remover aqueles com as classes 'li-whatsapp' e 'li-qprof'
+const filteredBtns = Array.from(ulBtns).filter(btn => {
+    return !(btn.classList.contains('li-whatsapp') || btn.classList.contains('li-qprof'));
+});
+
+/* Lógica de descer para div ao clicar no botão da nav */
+filteredBtns.forEach(element => {
     element.addEventListener('click', (e) => {
+
         e.preventDefault(); // Previne o comportamento padrão do link
 
         // Remove a classe 'active' de todos os elementos <a>

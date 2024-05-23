@@ -26,54 +26,60 @@
       </label>
       <img src="./img/logo-litus.svg" alt="Logo litus fidc" />
       <ul id="ul-botoes">
-        <li><a class="active" href="#inicio">Início</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#historia">História</a></li>
-        <li><a href="#institucional">Institucional</a></li>
-        <li><a href="#parceiros">Parceiros</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li> <a class="li-whatsapp" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+        <li><a class="active" href="#inicio" aria-label="Início do site">Início</a></li>
+        <li><a href="#servicos" aria-label="Conheça nossos serviços">Serviços</a></li>
+        <li><a href="#historia" aria-label="Conheça nossa história">História</a></li>
+        <li><a href="#institucional" aria-label="Saiba quem é a LITUS">Institucional</a></li>
+        <li><a href="#parceiros" aria-label="Veja nossos parceiros">Parceiros</a></li>
+        <li><a href="#contato" aria-label="Nossos contatos através de e-mail e celular">Contato</a></li>
+        <li> <a class="li-whatsapp" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato via whatsapp">
           <i class="fa-brands fa-whatsapp"></i> Entre em contato
         </a></li>
-        <li><a class="li-qprof" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer">Área do cliente</a></li>
+        <li><a class="li-qprof" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer" aria-label="Área do cliente">Área do cliente</a>
+        </li>
       </ul>
       <div class="botoes-box">
-        <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+        <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato via whatsapp">
           <i class="fa-brands fa-whatsapp"></i> Entre em contato
         </a>
-        <a class="portal-btn" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer">
+        <a class="portal-btn" href="https://litus.qprof.com.br/Authentication/Login.aspx?ReturnUrl=/SystemTemplate/FSI001.aspx" target="_blank" rel="noopener noreferrer" aria-label="Área do cliente">
           Área do cliente
         </a>
       </div>
     </nav>
     <!-- Inicio carousel -->
-    <div class="slideshow-container" id="inicio">
-      <div class="mySlides">
-        <div class="numbertext">1 / 2</div>
-        <div class="img-box"></div>
-        <div class="text">
-          <p>Libere o potencial do seu fluxo de caixa: Antecipe seus recebíveis e mantenha sua empresa no caminho certo.</p>
-          <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i> Entre em contato
-          </a>
-        </div>
+    <div id="slider">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+      <div id="slides">
+         <div id="overflow">
+            <div class="inner">
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                    <p>Libere o potencial do seu fluxo de caixa<br/> Antecipe seus recebíveis e mantenha sua empresa no caminho certo.</p>
+                    <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-brands fa-whatsapp"></i> Entre em contato
+                    </a>
+                  </div>
+               </div>
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                    <p>Agilidade que faz a diferença: Nossa equipe está aqui para oferecer soluções de crédito personalizadas e processos eficientes, para que você possa agir rapidamente.</p>
+                    <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-brands fa-whatsapp"></i> Entre em contato
+                    </a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="mySlides">
-        <div class="numbertext">2 / 2</div>
-        <div class="img-box-2"></div>
-        <div class="text">
-          <p>Agilidade que faz a diferença: Nossa equipe está aqui para oferecer soluções de crédito personalizadas e processos eficientes, para que você possa agir rapidamente.</p>
-          <a href="https://api.whatsapp.com/send?phone=551123739000" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i> Entre em contato
-          </a>
-        </div>
+      <div id="bullets">
+         <label for="slide1"></label>
+         <label for="slide2"></label>
       </div>
-    </div>
-    <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-    </div>
-    <br />
+   </div>
     <!-- Serviços e vantages -->
     <section class="vantanges-container" id="servicos">
       <h1  id="sobre">Trabalhe com a LITUS</h1>
